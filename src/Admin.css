@@ -1,0 +1,485 @@
+/* ===== ADMIN — ALVARIO ===== */
+
+.admin-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+.admin-header {
+  background: #0b0b0b;
+  color: #fff;
+  padding: 28px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #292929;
+}
+
+.admin-header p,
+.admin-login-brand {
+  font-size: 13px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.admin-header h1 {
+  font-size: 27px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.admin-header button {
+  background: #fff;
+  color: #111;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.admin-header button:hover {
+  background: #dcdcdc;
+}
+
+/* Main content */
+
+.admin-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 5%;
+}
+
+.admin-content h2 {
+  font-size: 23px;
+  font-weight: 600;
+  margin: 0 0 28px;
+}
+
+/* Orders table */
+
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table thead {
+  background: #111;
+  color: #fff;
+}
+
+.admin-table th {
+  padding: 17px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 17px 16px;
+  border-bottom: 1px solid #ededed;
+  font-size: 14px;
+}
+
+.admin-table tbody tr {
+  transition: background 0.2s;
+}
+
+.admin-table tbody tr:hover {
+  background: #f7f7f7;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status selector */
+
+.admin-table select {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+  padding: 9px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  max-width: 180px;
+}
+
+.admin-table select:focus {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+/* Loading and empty messages */
+
+.admin-content > p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Admin login page */
+
+.admin-login-page {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.admin-login-card {
+  background: #fff;
+  width: 100%;
+  max-width: 430px;
+  padding: 42px;
+  border: 1px solid #ddd;
+}
+
+.admin-login-brand {
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.admin-login-card h1 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.admin-login-card > p:not(.admin-login-brand):not(.admin-login-error) {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.admin-login-card label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 20px 0 9px;
+}
+
+.admin-login-card input {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.admin-login-card input:focus {
+  outline: 2px solid #111;
+  outline-offset: 1px;
+}
+
+.admin-login-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-login-card button:hover {
+  background: #333;
+}
+
+.admin-login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-login-error {
+  color: #b00020;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .admin-header {
+    padding: 22px 5%;
+    align-items: flex-start;
+  }
+
+  .admin-header h1 {
+    font-size: 21px;
+  }
+
+  .admin-header button {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .admin-content {
+    padding: 28px 4%;
+  }
+
+  .admin-content h2 {
+    font-size: 20px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 14px 12px;
+  }
+
+  .admin-login-card {
+    padding: 30px 24px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 25px;
+  }
+}
+
+/* Dashboard statistics */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.admin-stat-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-top: 3px solid #111;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgb(0 0 0 / 6%);
+}
+
+.admin-stat-card p {
+  color: #666;
+  font-size: 13px;
+  margin: 0 0 15px;
+}
+
+.admin-stat-card h3 {
+  color: #111;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .admin-stat-card {
+    padding: 18px;
+  }
+
+  .admin-stat-card h3 {
+    font-size: 25px;
+  }
+}
+
+/* Alvario Admin Brand */
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.admin-brand img {
+  display: block;
+  width: 150px;
+  height: 65px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.admin-brand h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .admin-brand {
+    gap: 12px;
+  }
+
+  .admin-brand img {
+     width: 110px;
+     height: 50px;
+  }
+
+  .admin-brand h1 {
+    font-size: 17px;
+  }
+}
+
+.admin-details-button {
+  background: #fff;
+  color: #111;
+  border: 1px solid #111;
+  padding: 9px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.admin-details-button:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Recherche et filtrage des commandes */
+.admin-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.admin-filters input,
+.admin-filters select {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+  outline: none;
+}
+
+.admin-filters input {
+  flex: 1;
+  min-width: 240px;
+}
+
+.admin-filters input:focus,
+.admin-filters select:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgb(0 0 0 / 8%);
+}
+
+.admin-filters button {
+  min-height: 44px;
+  padding: 10px 16px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-filters button:hover {
+  background: #fff;
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .admin-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-filters input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .admin-filters select,
+  .admin-filters button {
+    width: 100%;
+  }
+}
+
+.admin-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 18px 0;
+  border-top: 1px solid #e5e5e5;
+  color: #555;
+  font-size: 14px;
+}
+
+.admin-pagination-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-pagination-buttons button {
+  padding: 10px 18px;
+  border: 1px solid #111;
+  border-radius: 5px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.admin-pagination-buttons button:hover:not(:disabled) {
+  background: #333;
+}
+
+.admin-pagination-buttons button:disabled {
+  background: #eee;
+  color: #999;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .admin-pagination {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .admin-pagination-buttons {
+    justify-content: center;
+  }
+}
+
