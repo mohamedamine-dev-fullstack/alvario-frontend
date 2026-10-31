@@ -115,6 +115,21 @@ function Admin() {
       <section className="admin-content">
         <h2>Gestion des commandes</h2>
 
+        <div style={{
+           display: 'flex',
+           flexWrap: 'wrap',
+           gap: '10px',
+           marginBottom: '24px'
+        }}>
+          <button type="button" onClick={() => navigate('/admin/produits')}>
+             Gestion des produits
+          </button>
+
+          <button type="button" onClick={() => navigate('/admin/categories')}>
+             Gestion des catégories
+          </button>
+        </div>
+
         <div className="admin-stats">
           <div className="admin-stat-card">
             <p>Total commandes</p>

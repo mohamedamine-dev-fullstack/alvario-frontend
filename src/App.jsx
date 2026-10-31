@@ -7,6 +7,8 @@ import Commande from './Commande.jsx'
 import Admin from './Admin.jsx'
 import AdminLogin from './AdminLogin.jsx'
 import AdminCommandeDetail from './AdminCommandeDetail.jsx'
+import AdminProduits from './AdminProduits.jsx'
+import AdminCategories from './AdminCategories.jsx'
 import './App.css'
 
 function App() {
@@ -478,6 +480,16 @@ function App() {
       <Route
         path="/admin/commandes/:id"
         element={<AdminCommandeDetail />}
+      />
+
+      <Route
+        path="/admin/produits"
+        element={<AdminProduits />}
+      />
+
+      <Route
+        path="/admin/categories"
+        element={<AdminCategories />}
       />
 
     </Routes>
